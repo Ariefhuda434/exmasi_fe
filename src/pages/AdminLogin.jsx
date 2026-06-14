@@ -42,7 +42,7 @@ export default function AdminLogin() {
               value={form.username}
               onChange={e => setForm({ ...form, username: e.target.value })}
               style={{ width: '100%', background: '#111', border: '1px solid #333', borderRadius: 8, padding: '10px 12px', color: '#fff', fontSize: 14, boxSizing: 'border-box' }}
-              placeholder="exmasi_admin"
+              placeholder="username"
             />
           </div>
           <div style={{ marginBottom: 24 }}>

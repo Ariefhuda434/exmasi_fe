@@ -23,7 +23,7 @@ export default function Hero() {
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[.25em] text-zinc-200 backdrop-blur-xl">
               <Sparkles size={15} /> Vol. 3 Exhibition Project
             </div>
-            <h1 className="max-w-5xl text-6xl font-black uppercase leading-[.85] tracking-[-.08em] text-white md:text-8xl lg:text-[128px]">
+            <h1 className="max-w-5xl text-6xl font-black uppercase leading-[.85] tracking-[-.05em] text-white md:text-8xl lg:text-[128px]">
               EXMASI <span className="text-stroke block">VOL. 3</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-300">
