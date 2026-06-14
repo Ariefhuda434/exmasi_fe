@@ -4,7 +4,7 @@ export default function Agenda() {
     { title: 'Band Performance', img: '/images/fotoband.jpg' },
     { title: 'Live Mural', img: '/images/mural.jpg' },
     { title: 'Vocal Solo', img: '/images/vocal.jpg' },
-    { title: 'Stand Up Comedy', img: '/images/comedy.jpg' },
+    { title: 'Stand Up Comedy', img: '/images/standup.jpeg' },
     { title: 'After Party', img: '/images/party.jpg' }
   ]
 

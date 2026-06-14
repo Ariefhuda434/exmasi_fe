@@ -22,7 +22,7 @@
         >
 
           {/* NUMBER */}
-          <span className="absolute right-4 bottom-28 text-[80px] font-black text-white/5">
+          <span className="absolute right-4 bottom-30 text-[80px] font-black text-white/5">
             {String(index + 1).padStart(2, '0')}
           </span>
 
