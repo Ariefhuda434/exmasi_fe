@@ -51,15 +51,12 @@ function Footer() {
             </h3>
 
             <div className="mt-5 space-y-3 text-sm text-zinc-400">
-              <p className="flex items-center gap-2">
+              <a href="https://www.instagram.com/sapmappumsu" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                 <FaInstagram size={16} className="text-red-500" /> @sapmappumsu
-              </p>
-              <p className="flex items-center gap-2">
-                <FaInstagram size={16} className="text-red-500" /> @sapmappumsu_
-              </p>
-              <p className="flex items-center gap-2">
+              </a>
+              <a href="https://www.instagram.com/exmasi.event" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                 <FaInstagram size={16} className="text-red-500" /> @exmasi.event
-              </p>
+              </a>
             </div>
           </div>
 
@@ -69,12 +66,12 @@ function Footer() {
             </h3>
 
             <div className="mt-5 space-y-3 text-sm text-zinc-400">
-              <p className="flex items-center gap-2">
+              <a href="https://wa.me/085664144001" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                 <Phone size={16} className="text-red-500" /> Nopal: 085664144001
-              </p>
-              <p className="flex items-center gap-2">
+              </a>
+              <a href="https://wa.me/081266893508" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                 <Phone size={16} className="text-red-500" /> Fadil: 081266893508
-              </p>
+              </a>
             </div>
           </div>
 
