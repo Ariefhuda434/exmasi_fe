@@ -7,6 +7,10 @@ import { formatCurrency } from '../utils/formatCurrency'
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000'
 
+// proof_url bisa berupa full URL Cloudinary (https://...) atau path lama (/uploads/...)
+const getProofUrl = (proofUrl) =>
+  proofUrl?.startsWith('http') ? proofUrl : `${API_URL}${proofUrl}`
+
 const STATUS_COLOR = {
   pending:   { bg: '#ff990018', color: '#ffaa00', border: '#ff990030' },
   uploaded:  { bg: '#0088ff18', color: '#4da6ff', border: '#0088ff30' },
@@ -361,7 +365,7 @@ export default function AdminDashboard() {
                             {activeTab === 'noproof' ? (
                               <span style={{ color: '#ffaa00', fontSize: 12, fontWeight: 600 }}>{getCleanupCountdown(o.created_at)}</span>
                             ) : o.proof_url ? (
-                              <button onClick={() => setPreviewUrl(`${API_URL}${o.proof_url}`)}
+                              <button onClick={() => setPreviewUrl(getProofUrl(o.proof_url))}
                                 style={{ background: '#0d1a2a', color: '#4da6ff', border: '1px solid #4da6ff30', borderRadius: 6, padding: '5px 11px', fontSize: 12, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 5 }}>
                                 <Eye size={12} /> Lihat
                               </button>
@@ -451,7 +455,7 @@ export default function AdminDashboard() {
                           )}
                           <div className="action-row">
                             {o.proof_url && activeTab !== 'noproof' && (
-                              <button className="action-btn" onClick={() => setPreviewUrl(`${API_URL}${o.proof_url}`)}
+                              <button className="action-btn" onClick={() => setPreviewUrl(getProofUrl(o.proof_url))}
                                 style={{ background: '#0d1a2a', color: '#4da6ff' }}>
                                 <Eye size={13} /> Bukti TF
                               </button>
