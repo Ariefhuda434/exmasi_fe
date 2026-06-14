@@ -113,7 +113,7 @@ export default function AdminDashboard() {
     setResendLoading(id)
     try {
       await resendTicket(id)
-      setSuccessMsg(`✅ Tiket berhasil dikirim ulang ke ${email}`)
+      setSuccessMsg(`Tiket berhasil dikirim ulang ke ${email}`)
     } catch (err) {
       setErrorMsg(err.response?.data?.message || 'Gagal kirim ulang tiket')
     } finally {

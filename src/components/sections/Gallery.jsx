@@ -1,10 +1,10 @@
 export default function Gallery() {
   const items = [
     { title: 'Art Exhibition Night', img: '/images/Art.jpg' },
-    { title: 'Stand Up Comedy Show', img: '/images/comedy.jpg' },
+    { title: 'Stand Up Comedy Show', img: '/images/standup.jpeg' },
     { title: 'Live Mural Session', img: '/images/live.jpg' },
     { title: 'Vocal Performance', img: '/images/vocal.jpg' },
-    { title: 'Stand Up Comedy Show', img: '/images/comedy.jpg' },
+    { title: 'Live Mural Review', img: '/images/livemural.jpg' },
     { title: 'After Party Closing', img: '/images/party.jpg' },
     { title: 'Crowd Moment', img: '/images/silat.jpg' },
     { title: 'Behind The Stage', img: '/images/fotobackstage.jpg' },
