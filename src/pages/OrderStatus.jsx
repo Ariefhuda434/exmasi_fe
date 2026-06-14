@@ -45,7 +45,7 @@ export default function OrderStatus() {
   useEffect(() => {
     const fetchOrder = async () => {
       try {
-        const res  = await fetch(`http://localhost:5000/api/orders/${id}`)
+        const res  = await fetch(`${import.meta.env.VITE_API_URL}/api/orders/${id}`)
         const data = await res.json()
         setOrder(data)
         setLoading(false)
@@ -74,7 +74,7 @@ export default function OrderStatus() {
     const formData = new FormData()
     formData.append("proof", proof)
     try {
-      const res = await fetch(`http://localhost:5000/api/orders/${id}/upload-proof`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/orders/${id}/upload-proof`, {
         method: "POST",
         body: formData,
       })
