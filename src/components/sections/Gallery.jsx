@@ -1,7 +1,7 @@
 export default function Gallery() {
   const items = [
     { title: 'Art Exhibition Night', img: '/images/Art.jpg' },
-    { title: 'Stand Up Comedy Show', img: '/images/standup.jpg' },
+    { title: 'Stand Up Comedy Show', img: '/images/comedy.jpg' },
     { title: 'Live Mural Session', img: '/images/live.jpg' },
     { title: 'Vocal Performance', img: '/images/vocal.jpg' },
     { title: 'Stand Up Comedy Show', img: '/images/comedy.jpg' },
