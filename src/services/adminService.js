@@ -18,39 +18,51 @@ api.interceptors.request.use((config) => {
   return config
 })
 
-export const loginAdmin = (data) => {
+// ─── Login Admin ────────────────────────────────────────────────
+// Dipakai oleh AdminLogin.jsx
+export const adminLogin = (data) => {
   return api.post('/admin/login', data)
 }
 
+// Alias, biar aman kalau ada file lain yang import loginAdmin
+export const loginAdmin = adminLogin
+
+// ─── Stats Dashboard ────────────────────────────────────────────
 export const getStats = () => {
   return api.get('/admin/stats')
 }
 
+// ─── Get All Orders ─────────────────────────────────────────────
 export const getAllOrders = ({ search = '', status = '' } = {}) => {
   return api.get('/admin/orders', {
     params: { search, status }
   })
 }
 
+// ─── Update Status Order ────────────────────────────────────────
 export const updateStatus = (id, status) => {
   return api.patch(`/admin/orders/${id}/status`, { status })
 }
 
+// ─── Delete Order ───────────────────────────────────────────────
 export const deleteOrder = (id) => {
   return api.delete(`/admin/orders/${id}`)
 }
 
+// ─── Resend Ticket Email ────────────────────────────────────────
 export const resendTicket = (id) => {
   return api.post(`/admin/orders/${id}/resend-ticket`)
 }
+
+// ─── Export CSV ─────────────────────────────────────────────────
 export const exportCSV = async () => {
-  const token = localStorage.getItem('exmasi_token')
+  const token = getToken()
 
   if (!token) {
-    throw new Error('Token admin tidak ditemukan. Login ulang.')
+    throw new Error('Token admin tidak ditemukan. Login ulang dulu.')
   }
 
-  const res = await axios.get(`${API_URL}/api/admin/export`, {
+  const res = await api.get('/admin/export', {
     responseType: 'blob',
     headers: {
       Authorization: `Bearer ${token}`
@@ -66,9 +78,12 @@ export const exportCSV = async () => {
 
   a.href = url
   a.download = `exmasi-orders-${new Date().toISOString().slice(0, 10)}.csv`
+
   document.body.appendChild(a)
   a.click()
 
   a.remove()
   window.URL.revokeObjectURL(url)
 }
+
+export default api
