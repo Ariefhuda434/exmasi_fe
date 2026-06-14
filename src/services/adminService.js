@@ -43,15 +43,14 @@ export const deleteOrder = (id) => {
 export const resendTicket = (id) => {
   return api.post(`/admin/orders/${id}/resend-ticket`)
 }
-
 export const exportCSV = async () => {
-  const token = getToken()
+  const token = localStorage.getItem('exmasi_token')
 
   if (!token) {
-    throw new Error('Token admin tidak ditemukan. Login ulang dulu.')
+    throw new Error('Token admin tidak ditemukan. Login ulang.')
   }
 
-  const res = await api.get('/admin/orders/export/csv', {
+  const res = await axios.get(`${API_URL}/api/admin/export`, {
     responseType: 'blob',
     headers: {
       Authorization: `Bearer ${token}`
