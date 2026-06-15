@@ -383,9 +383,10 @@ export default function OrderStatus() {
 
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
               {[
-                { bank: "Bank Mandiri", no: "1070022849147" },
-                { bank: "DANA",         no: "083829430381"  },
-                { bank: "SeaBank",      no: "901548843973"  },
+                { bank: "Bank Mandiri", no: "1070022849147 (NOVAL JAMIL LUBIS)" },
+                { bank: "DANA",         no: "082168214521 (Alya Shila Arrahmi)"  },
+                { bank: "SeaBank",      no: "901548843973 (NOVAL JAMIL LUBIS)"  },
+                { bank: "Gopay",      no: "082168214521 (Alya Shila Arrahmi)"  },
               ].map(({ bank, no }, i) => (
                 <div key={i} style={{
                   background: "rgba(255,255,255,.03)", borderRadius: 10, padding: "10px 12px",
@@ -399,10 +400,10 @@ export default function OrderStatus() {
               ))}
             </div>
 
-            <div style={{ background: "rgba(255,255,255,.03)", borderRadius: 10, padding: "10px 12px", marginTop: 8 }}>
+            {/* <div style={{ background: "rgba(255,255,255,.03)", borderRadius: 10, padding: "10px 12px", marginTop: 8 }}>
               <div className="row-label">Atas Nama</div>
               <div className="row-value" style={{ marginTop: 3 }}>NOVAL JAMIL LUBIS</div>
-            </div>
+            </div> */}
           </div>
 
           {!uploaded ? (
