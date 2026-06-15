@@ -385,7 +385,6 @@ export default function OrderStatus() {
               {[
                 { bank: "Bank Mandiri", no: "1070022849147 (NOVAL JAMIL LUBIS)" },
                 { bank: "DANA",         no: "082168214521 (Alya Shila Arrahmi)"  },
-                { bank: "SeaBank",      no: "901548843973 (NOVAL JAMIL LUBIS)"  },
                 { bank: "Gopay",      no: "082168214521 (Alya Shila Arrahmi)"  },
               ].map(({ bank, no }, i) => (
                 <div key={i} style={{
